@@ -7,20 +7,20 @@ import { format } from '../../utils/utils';
   shadow: true,
 })
 export class MyComponent {
-                /**
-                 * The first name
-                 */
-                @Prop() readonly first: string;
+  /**
+   * The first name
+   */
+  @Prop() readonly first: string;
 
-                /**
-                 * The middle name
-                 */
-                @Prop() readonly middle: string;
+  /**
+   * The middle name
+   */
+  @Prop() readonly middle: string;
 
-                /**
-                 * The last name
-                 */
-                @Prop() readonly last: string;
+  /**
+   * The last name
+   */
+  @Prop() readonly last: string;
 
   private getText(): string {
     return format(this.first, this.middle, this.last);

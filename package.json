@@ -22,7 +22,7 @@
     "generate": "stencil generate",
     "prepare": "husky install",
     "format": "prettier --write 'src/**/*.{ts,tsx,css,html,json.js,css,scss}'",
-    "lint": "eslint src/**/*{.ts,.tsx}"
+    "lint-staged": "eslint src/**/*{.ts,.tsx}"
   },
   "dependencies": {
     "@stencil/core": "^2.7.0"
