@@ -6,6 +6,28 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface CitiPersonalCard {
+        /**
+          * The first name
+         */
+        "firstName": string;
+        /**
+          * The last name
+         */
+        "lastName": string;
+        /**
+          * The photo
+         */
+        "photo": string;
+        /**
+          * The resume
+         */
+        "resume": string;
+        /**
+          * The role
+         */
+        "role": string;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -20,19 +42,61 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface WebCountriesFinded {
+        /**
+          * The keyword
+         */
+        "keyword": string;
+    }
 }
 declare global {
+    interface HTMLCitiPersonalCardElement extends Components.CitiPersonalCard, HTMLStencilElement {
+    }
+    var HTMLCitiPersonalCardElement: {
+        prototype: HTMLCitiPersonalCardElement;
+        new (): HTMLCitiPersonalCardElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLWebCountriesFindedElement extends Components.WebCountriesFinded, HTMLStencilElement {
+    }
+    var HTMLWebCountriesFindedElement: {
+        prototype: HTMLWebCountriesFindedElement;
+        new (): HTMLWebCountriesFindedElement;
+    };
     interface HTMLElementTagNameMap {
+        "citi-personal-card": HTMLCitiPersonalCardElement;
         "my-component": HTMLMyComponentElement;
+        "web-countries-finded": HTMLWebCountriesFindedElement;
     }
 }
 declare namespace LocalJSX {
+    interface CitiPersonalCard {
+        /**
+          * The first name
+         */
+        "firstName"?: string;
+        /**
+          * The last name
+         */
+        "lastName"?: string;
+        /**
+          * The photo
+         */
+        "photo"?: string;
+        /**
+          * The resume
+         */
+        "resume"?: string;
+        /**
+          * The role
+         */
+        "role"?: string;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -47,15 +111,29 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface WebCountriesFinded {
+        /**
+          * The keyword
+         */
+        "keyword"?: string;
+        /**
+          * The userInput
+         */
+        "onUserInput"?: (event: CustomEvent<string>) => void;
+    }
     interface IntrinsicElements {
+        "citi-personal-card": CitiPersonalCard;
         "my-component": MyComponent;
+        "web-countries-finded": WebCountriesFinded;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "citi-personal-card": LocalJSX.CitiPersonalCard & JSXBase.HTMLAttributes<HTMLCitiPersonalCardElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "web-countries-finded": LocalJSX.WebCountriesFinded & JSXBase.HTMLAttributes<HTMLWebCountriesFindedElement>;
         }
     }
 }

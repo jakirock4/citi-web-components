@@ -7,8 +7,50 @@
 
     <script type="module" src="/build/citi-web-components.esm.js"></script>
     <script nomodule src="/build/citi-web-components.js"></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF"
+      crossorigin="anonymous"
+    />
   </head>
+
+  <style>
+    body {
+      background-color: #fbfbfb;
+    }
+  </style>
+
   <body>
-    <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-12 col-sm-5 col-md-4">
+          <citi-personal-card first-name="Esmeralda" last-name="Rodriguez" resume="Master en Scrum" photo="https://randomuser.me/api/portraits/women/75.jpg" role="Project manager">
+          </citi-personal-card>
+        </div>
+        <div class="col-12 col-sm-5 col-md-4">
+          <citi-personal-card first-name="Mariana" last-name="Del razo" resume="Master en java" photo="https://randomuser.me/api/portraits/women/74.jpg" role="Developer">
+          </citi-personal-card>
+        </div>
+        <div class="col-12 col-sm-5 col-md-4">
+          <citi-personal-card first-name="Mariana" last-name="Del razo" resume="Master en java" photo="https://randomuser.me/api/portraits/women/76.jpg" role="Java developer">
+          </citi-personal-card>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-12 col-md-12">
+        <web-countries-finded keyword="co" class="js-target-countries"></web-countries-finded>
+      </div>
+
+      <!-- <div class="row">
+        <div class="col-12 col-md-12 col-sm-12 col-lg-12">
+          <citi-video-palyer fuente="https://www.youtube.com/embed/Ee_uujKuJMI" provider="youtube"></citi-video-palyer>
+        </div>
+        <div class="col-12 col-md-12 col-sm-12 col-lg-12">
+          <citi-video-palyer fuente="https://player.vimeo.com/video/28191569?h=70c2888434" provider="vimeo"></citi-video-palyer>
+        </div>
+      </div> -->
+    </div>
   </body>
 </html>
