@@ -1,4 +1,3 @@
-import { TestWindow } from '@stencil/core/testing';
 import { WebCountriesFinded } from './web-countries-finded';
 
 describe('web-countries-finded', () => {
