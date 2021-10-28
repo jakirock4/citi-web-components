@@ -1,4 +1,3 @@
-// .lintstagedrc
 {
-  "*.(ts|tsx)": "eslint src/**/*{.ts,.tsx}"
+  "*.{ts, tsx}": ["eslint src/**/*{.ts,.tsx} --fix --config tslint.precommit.json --project tsconfig.json", "git add"]
 }

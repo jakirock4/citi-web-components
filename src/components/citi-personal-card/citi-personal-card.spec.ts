@@ -2,7 +2,6 @@ import { newSpecPage } from '@stencil/core/testing';
 import { CitiPersonalCard } from './citi-personal-card';
 
 describe('citi-personal-card', () => {
-
   it('Realizar el render sin valores', async () => {
     const { root } = await newSpecPage({
       components: [CitiPersonalCard],
@@ -69,5 +68,4 @@ describe('citi-personal-card', () => {
       </citi-personal-card>
     `);
   });
-  
 });
